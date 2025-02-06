@@ -6,10 +6,12 @@
 <html>
 <head><title>Hello World JSP</title></head>
 <body>
+<%! Date creationDate = new Date();%> 
 <p> 
 	<% out.println("<h1><font color=red>Hello World</h1>"); 
+       out.println("<h2>Created: " + creationDate.toString() + "</h2>"); 
        Date date = new Date();
-       out.print( "<h2 align = \"center\">" +date.toString()+"</h2>");
+       out.println( "<h2 align = \"center\"> Accessed on: " +date.toString()+"</h2>");
     %>
 </p>
 </body>
