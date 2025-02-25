@@ -128,7 +128,6 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
 .venv
 env/
 venv/
@@ -170,3 +169,9 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 cloud_computing_big_data.code-workspace
+
+use-case-dennis
+kafka-standalone
+mioio
+
+spark/data/nasa_http_log_1995.csv
