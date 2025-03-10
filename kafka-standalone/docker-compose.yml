@@ -1,0 +1,18 @@
+version: "3"
+services:
+  broker:
+    image: apache/kafka:latest
+    container_name: broker
+    ports:
+      - "9092:9092"
+    networks:
+      kafka_net:
+        ipv4_address: "192.168.12.5"
+
+networks:
+  kafka_net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet:  192.168.12.0/24
