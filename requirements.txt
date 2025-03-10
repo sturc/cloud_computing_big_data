@@ -9,3 +9,4 @@ pyspark==3.5.3
 pyarrow==14.0.1
 jupyterlab>=4.3.0  
 matplotlib>=3.9.2
+kafka-python>=2.0.3
