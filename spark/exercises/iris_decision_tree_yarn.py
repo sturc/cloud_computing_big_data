@@ -11,7 +11,7 @@ input_file = "hdfs:///data/iris.data"
 spark = (SparkSession
        .builder
        .appName("Iris data analysis")
-       .master("local")
+       .master("yarn")
        .getOrCreate())
 
 # load data file.
