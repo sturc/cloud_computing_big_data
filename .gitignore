@@ -171,7 +171,10 @@ cython_debug/
 cloud_computing_big_data.code-workspace
 
 use-case-dennis
-kafka-standalone
 mioio
 
 spark/data/nasa_http_log_1995.csv
+data/nasa_http_log_1995.csv
+data/churn.csv
+kafka-standalone/create_kafka_topic.py
+data/nasa_http_log_1995.csv
