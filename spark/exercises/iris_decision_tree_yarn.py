@@ -5,7 +5,7 @@ from pyspark.ml.feature import StringIndexer, VectorAssembler, IndexToString
 from pyspark.ml.classification import DecisionTreeClassifier
 from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 
-input_file = "data/iris.data"
+input_file = "hdfs:///data/iris.data"
 
 #create a SparkSession
 spark = (SparkSession
