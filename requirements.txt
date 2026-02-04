@@ -6,7 +6,8 @@ pytz==2024.2
 urllib3>=2.2.3
 pandas==2.2.3
 pyspark==3.5.3
-pyarrow==14.0.1
+pyarrow>=14.0.1
 jupyterlab>=4.3.0  
 matplotlib>=3.9.2
 kafka-python>=2.0.3
+python-openstackclient>=8.3.0
