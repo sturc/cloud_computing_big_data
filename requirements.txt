@@ -11,3 +11,4 @@ jupyterlab>=4.3.0
 matplotlib>=3.9.2
 kafka-python>=2.0.3
 python-openstackclient>=8.3.0
+ansible>=13.3.0
