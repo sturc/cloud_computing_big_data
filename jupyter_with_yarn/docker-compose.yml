@@ -1,6 +1,6 @@
 services:
   hadoop:
-    image: "csturm/hadoop-python:h3.3.6-p3.9.20-j11"
+    image: "csturm/hadoop-python:h3.3.6-p3.9.20-j11-v2"
     container_name: "hadoop"
     networks:
       hadoop_cluster:
@@ -9,7 +9,7 @@ services:
       - "8020:8020"
       - "8042:8042"
       - "8088:8088" 
-     # - "9000:9000" minio conflict
+      - "9000:9000"
       - "9864:9864"
       - "9865:9865"
       - "9868:9868"
@@ -40,10 +40,10 @@ services:
     container_name: Minio
     #image: quay.io/minio/minio@sha256:14cea493d9a34af32f524e538b8346cf79f3321eff8e708c1e2960462bd8936e
     image: quay.io/minio/minio:latest
-    command: server /data --console-address ":9001"
+    command: server /data --console-address ":9011" --address ":9010"
     ports:
-      - '9010:9000'
-      - '9011:9001'
+      - '9010:9010'
+      - '9011:9011'
     volumes:
       - ./minio/data:/data
     environment:
@@ -52,6 +52,9 @@ services:
     secrets:
       - minio_secret
     restart: unless-stopped
+    networks:
+      hadoop_cluster:
+        ipv4_address: "192.168.11.4"
     
 networks:
   hadoop_cluster:
