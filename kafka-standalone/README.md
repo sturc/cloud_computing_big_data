@@ -1,8 +1,8 @@
 # Start Kafka
 
-To start **kafka** execute `docker-compose up -d`
+To start **kafka** execute `docker compose up -d`
 
-To stop **kafka** execute `docker-compose down -d`
+To stop **kafka** execute `docker compose down`
 
 You can connect to the kafka container with the following command: `docker exec -it broker /bin/bash`
 
