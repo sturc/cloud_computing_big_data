@@ -1,7 +1,9 @@
 services:
   hadoop:
-    image: "csturm/hadoop-python:h3.3.6-p3.9.20-j11-v2"
+    image: "csturm/hadoop-python:h3.3.6-p3.9.20-j11-v3"
     container_name: "hadoop"
+    environment:
+      - PYSPARK_DRIVER_PYTHON=/usr/bin/python3.11
     networks:
       hadoop_cluster:
         ipv4_address: "192.168.11.2"
@@ -27,6 +29,8 @@ services:
       - HADOOP_CONF_DIR=/home/jovyan/hadoop-configs/
       - DOCKER_BUILDKIT=0
       - JUPYTER_ENABLE_LAB=yes
+      - PYSPARK_DRIVER_PYTHON=/usr/bin/python3.11
+      - PYSPARK_PYTHON=/usr/bin/python3.11
     ports:
       - "8888:8888"
     volumes:
